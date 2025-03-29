@@ -31,7 +31,10 @@ const connectDB = async () => {
   } catch (error) {
     console.error("MongoDB Connection Error:")
     console.error(`Error: ${error.message}`)
-    process.exit(1)
+    // Don't exit process in production as it will terminate the serverless function
+    if (process.env.NODE_ENV !== 'production') {
+      process.exit(1)
+    }
   }
 }
 
@@ -39,7 +42,10 @@ const connectDB = async () => {
 connectDB()
 
 // Middleware
-app.use(cors())
+app.use(cors({
+  origin: '*', // Update this with your frontend URL in production
+  credentials: true
+}))
 app.use(express.json())
 
 // Routes
@@ -51,18 +57,22 @@ app.get("/", (req, res) => {
   res.send("API is running...")
 })
 
-// Server Configuration
-const PORT = process.env.PORT || 5000
+// Only start the server in development mode
+// In production (Vercel), we just export the app
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  })
+}
 
-// Start Server
-const server = app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
-
-// Optional: Handle unhandled promise rejections
+// Handle unhandled promise rejections without closing server in production
 process.on('unhandledRejection', (error) => {
   console.error('Unhandled Promise Rejection:', error)
-  server.close(() => process.exit(1))
+  if (process.env.NODE_ENV !== 'production') {
+    process.exit(1)
+  }
 })
 
+// Export the Express app for Vercel
 export default app
