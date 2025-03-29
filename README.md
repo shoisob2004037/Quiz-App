@@ -6,4 +6,4 @@ QuizApp is a dynamic, user-friendly platform built with the MERN stack (MongoDB,
 3. AI Generated Quiz
 4. Ready Quiz of some topics.
 5. Dashboard with Quiz performance and scores.
-6. Resposive in every devices.
+6. Responsive in every devices.
