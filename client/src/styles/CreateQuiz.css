@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Ubuntu", sans-serif;
+}
+.create-quiz-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  
+  .create-quiz-card {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .create-quiz-card .card-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .form-group .form-control {
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+  }
+  
+  /* Textarea specific styling */
+  .form-group textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* Question card */
+  .question-card {
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .question-card:hover {
+    border-color: #00b4d8;
+    background-color: #f5f5f5;
+  }
+  
+  /* Option group */
+  .option-group {
+    margin-top: 15px;
+  }
+  
+  .option-group .form-control {
+    margin-bottom: 10px;
+  }
+  
+  /* Checkbox styling */
+  .option-group .form-check {
+    margin-top: 5px;
+  }
+  
+  .option-group .form-check-label {
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .option-group .form-check-input:checked + .form-check-label {
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  /* Add Option button */
+  .add-option-btn {
+    background-color: #7f8c8d !important;
+    border-color: #7f8c8d !important;
+    padding: 8px 16px !important;
+    font-size: 0.95rem !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .add-option-btn:hover {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(127, 140, 141, 0.3);
+  }
+  
+  /* Add Question button */
+  .add-question-btn {
+    background-color: #3498db !important;
+    border-color: #3498db !important;
+    padding: 10px 20px !important;
+    font-size: 1.1rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .add-question-btn:hover {
+    background-color: #2980b9 !important;
+    border-color: #2980b9 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+  }
+  
+  /* Create Quiz button */
+  .create-quiz-btn {
+    background-color: #27ae60 !important;
+    border-color: #27ae60 !important;
+    padding: 12px 25px !important;
+    font-size: 1.2rem !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    display: block;
+    margin: 20px auto 0;
+    font-weight: 600;
+  }
+  
+  .create-quiz-btn:hover {
+    background-color: #219653 !important;
+    border-color: #219653 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+  }
+  
+  .create-quiz-btn:active {
+    background-color: #1b7742 !important;
+    border-color: #1b7742 !important;
+  }

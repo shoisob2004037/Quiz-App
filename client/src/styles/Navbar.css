@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar-custom {
+    background: linear-gradient(90deg, #0288d1, #0277bd); /* Gradient from light to darker blue */
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Navbar Brand */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #e0f7fa !important; /* Light cyan on hover */
+  }
+  
+  /* Nav Links */
+  .nav-link-custom {
+    font-size: 1.1rem;
+    color: #ffffff !important;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link-custom:hover {
+    background-color: #0277bd; /* Slightly darker blue */
+    color: #e0f7fa !important; /* Light cyan */
+  }
+  
+  /* Profile Container */
+  .profile-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  /* Profile Button */
+  .profile-btn {
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #039be5; /* Slightly lighter blue for contrast */
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-btn:hover {
+    background-color: #0288d1; /* Darker shade on hover */
+  }
+  
+  /* Profile Card (shown on hover) */
+  .profile-card {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    color: #2c3e50; /* Dark blue-gray text */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1001;
+  }
+  
+  .profile-container:hover .profile-card {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .profile-card p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Navbar Toggle (Hamburger) */
+  .navbar-toggler {
+    border-color: #ffffff !important;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .navbar-custom {
+      padding: 10px 15px;
+    }
+  
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    .nav-link-custom {
+      font-size: 1rem;
+      margin: 5px 0;
+      text-align: center;
+    }
+  
+    .profile-container {
+      margin: 5px 0;
+      text-align: center;
+    }
+  
+    .profile-btn {
+      font-size: 1rem;
+      padding: 6px 10px;
+    }
+  
+    .profile-card {
+      position: static;
+    }
+  }

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Ubuntu", sans-serif;
+}
+.dashboard-container {
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #f5f6fa; /* Light gray-blue background for the entire dashboard */
+  }
+  
+  /* Dashboard Title */
+  .dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50; /* Dark blue-gray */
+    text-align: center;
+  }
+  
+  /* Stats Card (Overall Performance Summary) */
+  .stats-card {
+    background-color: #dfe8f6; /* Soft blue */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .stats-card .card-title {
+    font-size: 1.5rem;
+    color: #34495e; /* Darker blue-gray */
+    margin-bottom: 15px;
+  }
+  
+  .summary-details p {
+    font-size: 1.1rem;
+    color: #5d6d7e; /* Muted blue-gray */
+    margin-bottom: 10px;
+  }
+  
+  .chart-container {
+    padding: 10px;
+  }
+  
+  /* Quiz Card (Performance Tab) */
+  .quiz-card.performance {
+    background: linear-gradient(#cabff6, #bfbfe2);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+ 
+  
+  .quiz-card.performance .card-title {
+    font-size: 1.3rem;
+    color: black; /* Dark purple */
+    margin-bottom: 10px;
+  }
+  
+  .quiz-card.performance .card-text {
+    font-size: 1rem;
+    color:rgb(32, 23, 23); /* Muted purple */
+  }
+  
+  /* Quiz Card (Available Quizzes Tab) */
+  .quiz-card.available {
+    background: linear-gradient(45deg, #dedeee, #cfcfe6);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .quiz-card.available:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  .quiz-card.available .card-title {
+    font-size: 1.3rem;
+    color: #00695c; /* Dark teal */
+  }
+  
+  .quiz-card.available .card-text {
+    font-size: 1rem;
+    color: #00838f; /* Muted teal */
+  }
+  
+  /* Tabs Styling */
+  .nav-tabs {
+    border-bottom: 2px solid #b0bec5; /* Light blue-gray */
+  }
+  
+  .nav-tabs .nav-link {
+    font-size: 1.2rem;
+    color: #607d8b; /* Muted blue */
+    background-color: #eceff1; /* Light gray */
+    border: none;
+    margin-right: 5px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #b3e5fc; /* Light sky blue */
+    color: #0277bd; /* Darker blue */
+    font-weight: bold;
+  }
+  
+  .nav-tabs .nav-link:hover:not(.active) {
+    background-color: #cfd8dc; /* Slightly darker gray */
+  }
+  
+  /* Buttons */
+  .btn-custom {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  .btn-custom-primary {
+    background-color: #81c784; /* Soft green */
+    border-color: #81c784;
+  }
+  
+  .btn-custom-primary:hover {
+    background-color: #66bb6a; /* Darker green */
+    border-color: #66bb6a;
+  }
+  
+  .btn-custom-success {
+    background-color: #ffca28; /* Soft yellow */
+    border-color: #ffca28;
+    color: #212121; /* Dark gray for contrast */
+  }
+  
+  .btn-custom-success:hover {
+    background-color: #ffb300; /* Darker yellow */
+    border-color: #ffb300;
+  }
+  
+  .btn-danger {
+    background-color: #ef9a9a; /* Soft red */
+    border-color: #ef9a9a;
+  }
+  
+  .btn-danger:hover {
+    background-color: #e57373; /* Darker red */
+    border-color: #e57373;
+  }
+  
+  /* Loading and Error States */
+  .text-center.mt-5 {
+    color: #455a64; /* Dark blue-gray */
+  }
+  
+  .text-danger {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .dashboard-title {
+      font-size: 2rem;
+    }
+  
+    .stats-card {
+      padding: 15px;
+    }
+  
+    .stats-card .card-title {
+      font-size: 1.3rem;
+    }
+  
+    .summary-details p {
+      font-size: 1rem;
+    }
+  
+    .quiz-card.performance,
+    .quiz-card.available {
+      padding: 15px;
+    }
+  
+    .quiz-card.performance .card-title,
+    .quiz-card.available .card-title {
+      font-size: 1.2rem;
+    }
+  
+    .quiz-card.performance .card-text,
+    .quiz-card.available .card-text {
+      font-size: 0.9rem;
+    }
+  
+    .nav-tabs .nav-link {
+      font-size: 1rem;
+      padding: 8px 12px;
+    }
+  
+    .chart-container {
+      height: 200px !important;
+    }
+  }

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Ubuntu", sans-serif;
+}
+.quiz-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Quiz card styling */
+  .quiz-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+
+  /* Quiz title */
+  .quiz-title {
+    font-size: 2rem;
+    color: #0780fa;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Quiz description */
+  .quiz-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Question block */
+  .question-block {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Question text */
+  .question-text {
+    font-size: 1.25rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  /* Option styling */
+  .quiz-option {
+    margin: 10px 0;
+  }
+  
+  .quiz-option label {
+    font-size: 1rem;
+    color: #555;
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    display: block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .quiz-option label:hover {
+    background-color: #ecf0f1;
+    border-color: #3498db;
+    color: #2c3e50;
+  }
+  
+  /* Selected option */
+  .quiz-option input[type="radio"]:checked + label {
+    background-color: #3498db;
+    border-color: #2980b9;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Disabled option (optional, if you add disabled state later) */
+  .quiz-option input[type="radio"]:disabled + label {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    background-color: #27ae60 !important;
+    border-color: #27ae60 !important;
+    padding: 10px 20px !important;
+    font-size: 1.2rem !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .submit-btn:hover {
+    background-color: #219653 !important;
+    border-color: #219653 !important;
+    transform: scale(1.05);
+  }
+  
+  .submit-btn:active {
+    background-color: #1b7742 !important;
+    border-color: #1b7742 !important;
+  }
+  
+  /* Results section */
+  .results-header {
+    font-size: 1.75rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .results-text {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .results-percentage {
+    color: #e67e22;
+    font-weight: bold;
+  }
+  
+  /* Back button */
+  .back-btn {
+    background-color: #7f8c8d !important;
+    border-color: #7f8c8d !important;
+    padding: 8px 16px !important;
+    font-size: 1rem !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .back-btn:hover {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    transform: scale(1.05);
+  }
+  
+  /* Review section */
+  .review-header {
+    font-size: 1.5rem;
+    color: #8e44ad;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .accordion-header-custom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 15px;
+  }
+  
+  .review-correct {
+    border-left: 4px solid #2ecc71;
+    background-color: #f0fff4;
+  }
+  
+  .review-incorrect {
+    border-left: 4px solid #e74c3c;
+    background-color: #fff1f0;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  /* Loading and error states */
+  .text-center {
+    font-size: 1.2rem;
+    color: #555;
+  }
